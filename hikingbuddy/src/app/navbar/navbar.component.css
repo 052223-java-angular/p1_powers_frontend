@@ -1,0 +1,25 @@
+
+
+nav > ul{
+    @apply flex;
+    @apply gap-5;
+}
+
+#title{
+    @apply py-2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

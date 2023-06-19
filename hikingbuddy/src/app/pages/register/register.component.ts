@@ -1,9 +1,9 @@
 
 import { Component, Injectable, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms'
-import { RegisterService } from '../services/register.service';
+import { RegisterService } from 'src/app/services/register.service';
 import { Observable } from 'rxjs';
-import { RegisterPayload } from '../models/RegisterPayload';
+import { RegisterPayload } from '../../models/RegisterPayload';
 
 
 
@@ -40,10 +40,11 @@ export class RegisterComponent {
       );
       this.rg.submit(payload).subscribe({
         next: value => {
-          console.log("Form submitted")
+          console.log("Form submitted");
+          console.log(value);
         },
         error: error => {
-          console.log("Form nut submitted");
+          console.log("Form not submitted");
           console.log(error);
         }
       });

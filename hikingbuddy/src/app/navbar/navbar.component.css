@@ -3,11 +3,31 @@
 nav > ul{
     @apply flex;
     @apply gap-5;
+    @apply justify-center;
+    
+    
+}
+
+nav{
+    @apply bg-green-700;
+    
+}
+
+body{
+    @apply flex;
+    @apply flex-row;
+    @apply w-56;
+    @apply justify-center;
 }
 
 #title{
     @apply py-2;
+    @apply justify-center
 }
+
+
+
+
 
 
 

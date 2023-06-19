@@ -8,8 +8,11 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { SearchComponent } from './pages/search/search.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TopratedComponent } from './subcomponents/toprated/toprated.component';
+import { FooterComponent } from './subcomponents/footer/footer.component';
+import { MyaccountComponent } from './pages/myaccount/myaccount.component';
+import { TrailinfoComponent } from './pages/trailinfo/trailinfo.component';
 
 
 @NgModule({
@@ -18,8 +21,11 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     HomeComponent,
     LoginComponent,
-    SearchComponent,
-    RegisterComponent
+    RegisterComponent,
+    TopratedComponent,
+    FooterComponent,
+    MyaccountComponent,
+    TrailinfoComponent
   ],
   imports: [
     RouterModule,

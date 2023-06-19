@@ -1,0 +1,28 @@
+
+
+<div id="form">
+
+<form [formGroup]= "formGroup">
+  <h1>Register</h1>
+  <div id="controls">
+    <label >
+        Username:
+        <input type="text" formControlName="username" placeholder="Username" id="input"/>
+    </label>
+    <label>
+        Password:
+        <input type="password" fromControlName="password" placeholder="Password" id="input"/>
+    </label>
+    <label>
+        Confirm Password:
+        <input type="password" formControlName="confirmPassword" placeholder="Confirm Password" id="input"/>
+    </label>
+    <button type="submit" (click)="submitForm()">Submit</button>
+  </div>
+</form>
+</div>
+
+
+
+
+

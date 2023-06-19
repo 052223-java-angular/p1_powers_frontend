@@ -1,0 +1,54 @@
+#form{
+    @apply flex;
+    @apply flex-row;
+    @apply justify-center;
+    @apply my-40;
+}
+
+form{
+    @apply py-2;
+    @apply px-3;
+    @apply shadow-xl;
+    @apply rounded;
+}
+
+form > h1{
+    @apply ml-14;
+}
+
+#controls{
+    @apply flex;
+    @apply flex-col;
+    @apply basis-4;
+    @apply gap-4;
+
+}
+button{
+    @apply bg-blue-700;
+    @apply text-white;
+    @apply rounded;
+    @apply py-2;
+    @apply shadow-xl;
+    
+}
+
+
+#controls > label{
+    @apply flex;
+    @apply flex-col;
+ 
+    
+}
+
+#input{
+    @apply bg-slate-300;
+    @apply rounded;
+}
+
+form > h1{
+    @apply font-medium;
+}
+
+
+
+

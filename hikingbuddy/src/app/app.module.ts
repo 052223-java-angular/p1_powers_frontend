@@ -13,6 +13,7 @@ import { TopratedComponent } from './subcomponents/toprated/toprated.component';
 import { FooterComponent } from './subcomponents/footer/footer.component';
 import { MyaccountComponent } from './pages/myaccount/myaccount.component';
 import { TrailinfoComponent } from './pages/trailinfo/trailinfo.component';
+import { RatingComponent } from './pages/rating/rating.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { TrailinfoComponent } from './pages/trailinfo/trailinfo.component';
     TopratedComponent,
     FooterComponent,
     MyaccountComponent,
-    TrailinfoComponent
+    TrailinfoComponent,
+    RatingComponent
   ],
   imports: [
     RouterModule,

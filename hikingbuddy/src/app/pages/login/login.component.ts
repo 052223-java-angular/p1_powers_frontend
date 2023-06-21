@@ -4,6 +4,7 @@ import { LoginPayload } from 'src/app/models/LoginPayload';
 import { Principal } from 'src/app/models/Principal';
 import { LoginService } from 'src/app/services/login.service';
 import { PrincipalServiceService } from 'src/app/services/principal-service.service';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr'  ;
 
 @Component({
@@ -15,10 +16,11 @@ export class LoginComponent {
 
   formGroup! : FormGroup;
   
+  
 
 
 
-  constructor(private fb: FormBuilder, private login: LoginService, private principalService: PrincipalServiceService, private toastr: ToastrService){}
+  constructor(private fb: FormBuilder, private login: LoginService, private toastr: ToastrService, private router: Router){}
 
   ngOnInit()
   {
@@ -38,16 +40,17 @@ export class LoginComponent {
       )
 
       this.login.submit(payload).subscribe
-      ({
-        next: value =>{
-           this.principalService.setPrincipal(value.id, value.username, value.token, value.role);
-           console.log("Logged in!");
+      (
+        (resp) =>{
+            const principal: Principal = {...resp};
+            localStorage.setItem('auth', JSON.stringify(principal));
+            this.toastr.success('Login Successful');
+            this.router.navigate(['/home']);
         },
-        error: error => {
-          console.log("Login not processed");
-          console.log(error);
+        (error) =>{
+          this.toastr.error(error.error.message);
         }
-      })
+      );
   }
 
 }

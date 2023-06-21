@@ -4,6 +4,7 @@ import { LoginPayload } from '../models/LoginPayload';
 import { Principal } from '../models/Principal';
 import { Observable } from 'rxjs';
 import { RegisterPayload } from '../models/RegisterPayload';
+import { Auth } from '../models/Auth';
 
 @Injectable({
   providedIn: 'root'
@@ -14,13 +15,9 @@ export class LoginService {
 
   submit(payload:LoginPayload): Observable<Principal>
   {
-      let params = new HttpParams();
-
-      params = params.set("username", payload.username.toString());
-      params = params.set("password", payload.password.toString());
-
-     return this.http.get<Principal>("http://localhost:8080/hikingbuddy/api/auth/login", {
-          params: params
-     });
+      return this.http.post<Auth>("http://localhost:8080/hikingbuddy/api/auth/login", payload);
+     
   }
+
+
 }

@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './shared/components/home/home.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
-import { LoginComponent } from './pages/login/login.component';
-import { RegisterComponent } from './pages/register/register.component';
+import { LoginComponent } from './modules/User/components/login/login.component';
+import { RegisterComponent } from './modules/User/components/register/register.component';
 
 
 const routes: Routes = [

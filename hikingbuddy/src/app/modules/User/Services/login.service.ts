@@ -1,9 +1,9 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { LoginPayload } from '../models/LoginPayload';
-import { Principal } from '../models/Principal';
+import { LoginPayload } from '../../../models/LoginPayload';
+import { Principal } from '../../../models/Principal';
 import { Observable } from 'rxjs';
-import { RegisterPayload } from '../models/RegisterPayload';
+import { RegisterPayload } from '../../../models/RegisterPayload';
 
 @Injectable({
   providedIn: 'root'

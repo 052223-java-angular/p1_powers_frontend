@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoginPayload } from 'src/app/models/LoginPayload';
 import { Principal } from 'src/app/models/Principal';
-import { LoginService } from 'src/app/services/login.service';
-import { PrincipalServiceService } from 'src/app/services/principal-service.service';
+import { LoginService } from 'src/app/modules/User/Services/login.service';
+import { PrincipalServiceService } from 'src/app/modules/User/Services/principal-service.service';
 
 @Component({
   selector: 'app-login',

@@ -1,9 +1,9 @@
 
 import { Component, Injectable, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms'
-import { RegisterService } from 'src/app/services/register.service';
+import { RegisterService } from 'src/app/modules/User/Services/register.service';
 import { Observable } from 'rxjs';
-import { RegisterPayload } from '../../models/RegisterPayload';
+import { RegisterPayload } from '../../../../models/RegisterPayload';
 
 
 

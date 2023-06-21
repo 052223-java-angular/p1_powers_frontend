@@ -1,0 +1,21 @@
+input{
+    @apply bg-slate-300;
+    @apply rounded;
+    @apply py-2;
+    @apply px-2
+}
+
+#trail_search{
+    @apply flex;
+    @apply flex-row;
+    @apply justify-center;
+    @apply mt-12;
+    @apply gap-2;
+}
+
+button{
+    @apply bg-blue-600;
+    @apply text-white;
+    @apply px-2;
+    @apply rounded;
+}

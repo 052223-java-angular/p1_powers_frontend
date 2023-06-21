@@ -4,12 +4,14 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { HomeComponent } from './pages/home/home.component';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { HomeComponent } from './shared/components/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { SearchComponent } from './pages/search/search.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MyaccountComponent } from './pages/myaccount/myaccount.component';
+import { TrailinfoComponent } from './pages/trailinfo/trailinfo.component';
+import { RatingComponent } from './pages/rating/rating.component';
 
 
 @NgModule({
@@ -18,8 +20,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     HomeComponent,
     LoginComponent,
-    SearchComponent,
-    RegisterComponent
+    RegisterComponent,
+    MyaccountComponent,
+    TrailinfoComponent,
+    RatingComponent
   ],
   imports: [
     RouterModule,

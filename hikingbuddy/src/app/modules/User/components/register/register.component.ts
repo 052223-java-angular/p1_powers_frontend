@@ -1,9 +1,12 @@
 
 import { Component, Injectable, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms'
-import { RegisterService } from 'src/app/modules/User/Services/register.service';
 import { Observable } from 'rxjs';
 import { RegisterPayload } from '../../../../models/RegisterPayload';
+import { Auth } from 'src/app/models/Auth';
+import { UserService } from '../../Services/user.service';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 
 
@@ -20,7 +23,7 @@ export class RegisterComponent {
 
   
 
-  constructor(private fb: FormBuilder, private rg : RegisterService){}
+  constructor(private fb: FormBuilder, private user: UserService, private toastr: ToastrService, private router: Router){}
 
   ngOnInit()
   {
@@ -38,16 +41,19 @@ export class RegisterComponent {
         this.formGroup.controls['password'].value,
         this.formGroup.controls['confirmPassword'].value
       );
-      this.rg.submit(payload).subscribe({
-        next: value => {
-          console.log("Form submitted");
-          console.log(value);
-        },
-        error: error => {
-          console.log("Form not submitted");
-          console.log(error);
-        }
-      });
+      this.user.register(payload).subscribe(
+        (resp) =>{
+          const auth: Auth= {...resp};
+          localStorage.setItem('auth', JSON.stringify(auth));
+          this.toastr.success('Login Successful');
+          this.router.navigate(['/home']);
+      },
+      (error) =>{
+        console.log(error.error.message);
+        this.formGroup.reset();
+        this.toastr.error(error.error.message);
+      }
+      );
       
 
       

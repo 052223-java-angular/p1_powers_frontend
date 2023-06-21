@@ -4,6 +4,7 @@ import { LoginPayload } from 'src/app/models/LoginPayload';
 import { Principal } from 'src/app/models/Principal';
 import { LoginService } from 'src/app/services/login.service';
 import { PrincipalServiceService } from 'src/app/services/principal-service.service';
+import { ToastrService } from 'ngx-toastr'  ;
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginComponent {
 
 
 
-  constructor(private fb: FormBuilder, private login: LoginService, private principalService: PrincipalServiceService){}
+  constructor(private fb: FormBuilder, private login: LoginService, private principalService: PrincipalServiceService, private toastr: ToastrService){}
 
   ngOnInit()
   {

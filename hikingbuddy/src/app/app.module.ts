@@ -6,12 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { HomeComponent } from './shared/components/home/home.component';
-import { LoginComponent } from './pages/login/login.component';
-import { RegisterComponent } from './pages/register/register.component';
+import { LoginComponent } from './modules/User/components/login/login.component';
+import { RegisterComponent } from './modules/User/components/register/register.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { MyaccountComponent } from './pages/myaccount/myaccount.component';
+import { MyaccountComponent } from './modules/User/components/myaccount/myaccount.component';
 import { TrailinfoComponent } from './pages/trailinfo/trailinfo.component';
-import { RatingComponent } from './pages/rating/rating.component';
+import { RatingComponent } from './modules/Ratings/components/rating/rating.component';
 
 
 @NgModule({

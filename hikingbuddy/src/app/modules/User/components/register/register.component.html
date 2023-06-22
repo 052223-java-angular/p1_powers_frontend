@@ -17,6 +17,10 @@
         Confirm Password:
         <input type="password" formControlName="confirmPassword" placeholder="Confirm Password" id="input"/>
     </label>
+    <div *ngIf="
+    formGroup.get('confirmPassword')?.value != formGroup.get('password')?.value">
+    <h6 >Passwords do not match</h6>
+  </div>
     <button type="submit" (click)="submitForm()">Submit</button>
   </div>
 </form>

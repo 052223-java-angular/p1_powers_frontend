@@ -12,6 +12,11 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MyaccountComponent } from './modules/User/components/myaccount/myaccount.component';
 import { TrailinfoComponent } from './pages/trailinfo/trailinfo.component';
 import { RatingComponent } from './modules/Ratings/components/rating/rating.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+
 
 
 @NgModule({
@@ -31,9 +36,11 @@ import { RatingComponent } from './modules/Ratings/components/rating/rating.comp
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
     
   ],
-  providers: [HttpClient],
+  providers: [HttpClient, HomeComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

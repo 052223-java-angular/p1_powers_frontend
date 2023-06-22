@@ -19,6 +19,6 @@ export class UserService {
 
   register(payload : RegisterPayload): Observable<Auth>
   {
-    return this.http.post<Auth>("http://localhost:8080/hikingbuddy/api/register", payload);
+    return this.http.post<Auth>("http://localhost:8080/hikingbuddy/api/auth/register", payload);
   }
 }

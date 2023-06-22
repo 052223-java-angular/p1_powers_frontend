@@ -47,7 +47,7 @@ export class LoginComponent {
             this.router.navigate(['/home']);
         },
         (error) =>{
-          console.log(error.error.message);
+          console.log(error.message);
           this.formGroup.reset();
           this.toastr.error(error.error.message);
         }

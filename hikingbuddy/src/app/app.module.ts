@@ -13,6 +13,8 @@ import { MyaccountComponent } from './modules/User/components/myaccount/myaccoun
 import { TrailinfoComponent } from './pages/trailinfo/trailinfo.component';
 import { RatingComponent } from './modules/Ratings/components/rating/rating.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 
 @NgModule({
@@ -33,7 +35,6 @@ import { NotFoundComponent } from './shared/components/not-found/not-found.compo
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
     ToastrModule.forRoot()
     
   ],

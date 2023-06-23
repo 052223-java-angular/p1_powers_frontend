@@ -12,6 +12,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MyaccountComponent } from './modules/User/components/myaccount/myaccount.component';
 import { TrailinfoComponent } from './pages/trailinfo/trailinfo.component';
 import { RatingComponent } from './modules/Ratings/components/rating/rating.component';
+import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { RatingComponent } from './modules/Ratings/components/rating/rating.comp
     RegisterComponent,
     MyaccountComponent,
     TrailinfoComponent,
-    RatingComponent
+    RatingComponent,
+    NotFoundComponent
   ],
   imports: [
     RouterModule,

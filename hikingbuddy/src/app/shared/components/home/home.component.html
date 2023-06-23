@@ -1,7 +1,13 @@
 <div id= "trail_search"class="flex column justify center">
 <input type="text" #searchtext placeholder="Search For trails">
-<button (click) = search(searchtext.value)>Search</button>
+<button (click)= "search(searchtext.value)" (click)= "clicked = true" #searchbutton>Search</button>
+<div *ngIf="clicked===true">
+  
 </div>
+</div>
+
+<app-top-rated></app-top-rated>
+
 
 
 

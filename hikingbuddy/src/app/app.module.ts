@@ -11,11 +11,12 @@ import { LoginComponent } from './modules/User/components/login/login.component'
 import { RegisterComponent } from './modules/User/components/register/register.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MyaccountComponent } from './modules/User/components/myaccount/myaccount.component';
-import { TrailinfoComponent } from './pages/trailinfo/trailinfo.component';
 import { RatingComponent } from './modules/Ratings/components/rating/rating.component';
 import { TopRatedComponent } from './modules/Trail/Components/top-rated/top-rated.component';
 import { ToastrModule } from 'ngx-toastr';
 import { TrailInfoComponent } from './modules/Trail/Components/TrailInfo/trail-info/trail-info.component';
+import { NotFoundComponent } from './shared/components/not-found/not-found.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -26,10 +27,10 @@ import { TrailInfoComponent } from './modules/Trail/Components/TrailInfo/trail-i
     LoginComponent,
     RegisterComponent,
     MyaccountComponent,
-    TrailinfoComponent,
     RatingComponent,
     TopRatedComponent,
     TrailInfoComponent,
+    NotFoundComponent,
   ],
   imports: [
     RouterModule,
@@ -39,6 +40,7 @@ import { TrailInfoComponent } from './modules/Trail/Components/TrailInfo/trail-i
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    CommonModule
     
   ],
   providers: [HttpClient, ToastrModule],

@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry} from 'rxjs/operators';
 import { Trail } from 'src/app/models/Trail';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,14 +16,19 @@ import { Trail } from 'src/app/models/Trail';
 @Injectable()
 export class HomeComponent {
   
-  trail! : Trail
+  name! : String
+  clicked : Boolean = false
 
-  constructor(private http: HttpClient){}
+  constructor(private http: HttpClient, private router: Router){}
 
   search(text:String) 
   {
-    
+    this.name = text;
+    //console.log(this.name);
   }
+
+ 
+  
   
   
 

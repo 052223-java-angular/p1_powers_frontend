@@ -19,6 +19,7 @@ import { NotFoundComponent } from './shared/components/not-found/not-found.compo
 import { CommonModule } from '@angular/common';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,10 +28,9 @@ import { CommonModule } from '@angular/common';
     LoginComponent,
     RegisterComponent,
     MyaccountComponent,
-    RatingComponent,
-    TopRatedComponent,
     TrailInfoComponent,
-    NotFoundComponent,
+    RatingComponent,
+    NotFoundComponent
   ],
   imports: [
     RouterModule,
